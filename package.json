@@ -4,13 +4,13 @@
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
   },
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0",
     "canvas": "1.6.11",
     "jimp": "0.2.28",
-     "fs": "0.0.1-security",
+     "fs": "0.0.1-security"
   }
 }
