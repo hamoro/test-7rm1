@@ -1,5 +1,11 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client();
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+    console.log('I am ready!');
+});
+
+
 var Canvas = require('canvas');// npm i canvas
 var jimp = require('jimp');// npm i jimp 
 const fs = require("fs");// npm i fs
