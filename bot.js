@@ -86,7 +86,7 @@ client.on("guildMemberAdd", function(member) {
         const embed = new Discord.RichEmbed()
         .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('***ولكم نورت يا وحش @here***')
+ .setDescription('***ولكم نورت يا وحش @here|[user] ***')
 .setThumbnail(member.avatarURL)
   .setImage('')
         .setTimestamp()
