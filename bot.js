@@ -86,13 +86,19 @@ client.on("guildMemberAdd", function(member) {
         const embed = new Discord.RichEmbed()
         .setColor('B90C0C')
         .setAuthor(member.user.tag, member.user.avatarURL)
- .setDescription('***ولكم نورت يا وحش @here|[user] ***')
+ .setDescription('**ولكم نورت يا وحش @here**')
 .setThumbnail(member.avatarURL)
   .setImage('')
         .setTimestamp()
         return wc.sendEmbed(embed);
         
 });
+
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`**WELCOM TO ⚔KD⚔Kingdom of  Death⚔**${member} `) 
+}).catch(console.error)
+})
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
