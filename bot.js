@@ -57,7 +57,7 @@ client.on("guildMemberAdd", member => {
                         ctx.fontSize = '20px';
                         ctx.fillStyle = "#FFFFFF";
                         ctx.textAlign = "center";
-                        ctx.fillText(`انت العضو رقم  ${member.guild.memberCount} ! `, 340 , 98);
+                        ctx.fillText(`انت العضو رقم${member.guild.memberCount} ! `, 340 , 98);
     
                                                       //name
                               ctx.font = '20px Arial Bold';
@@ -71,7 +71,7 @@ client.on("guildMemberAdd", member => {
                               ctx.fontSize = '28px';
                               ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
-   ctx.fillText(`WELCOME TO${member.guild.name} CLAN` , 200, 190);
+   ctx.fillText(`WELCOME TO${member.guild.name}CLAN` , 200, 190);
    
    
 
