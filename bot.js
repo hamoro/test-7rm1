@@ -128,7 +128,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "⚔KD⚔Kingdom of  Death⚔")
+        guild = client.guilds.find("name", "DzGaming Official Server")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -136,10 +136,8 @@ client.on("ready", () => {
         })
     })
 })
-
-
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', 'chat');
+    let channel = member.guild.channels.find('name', 'join');
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -150,7 +148,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "⚔KD⚔Kingdom of  Death⚔")
+        guild = client.guilds.find("name", "DzGaming Official Server")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -158,10 +156,7 @@ client.on("guildMemberAdd", (member) => {
                 if (dat[Inv] < Invite.uses) {
                     console.log(3);
                     console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
-    
-    channel.send(`**نورت سيرفر يـLǦ̩̥ = >** ${member}`)     
-    channel.send(`**تم دعوته من قبل = >** ${Invite.inviter}`)     
-             
+ channel.send(` ♥ **تم دعوته من قبل ${Invite.inviter} ♥ `)            
  }
             dat[Inv] = Invite.uses;
         })
