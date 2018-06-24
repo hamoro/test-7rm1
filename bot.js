@@ -125,7 +125,7 @@ client.on("guildMemberAdd", member => {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("442919008715669505 - Server id");
+        guild = client.guilds.get("442919008715669505- Server id");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -137,7 +137,7 @@ client.on("ready", () => {
 
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("459738198357311488 - Room id");
+    let channel = member.guild.channels.get("459738198357311488- Room id");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -148,7 +148,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.get("442919008715669505 - Server id");
+        guild = client.guilds.get("442919008715669505- Server id");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
