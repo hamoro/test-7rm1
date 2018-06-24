@@ -158,7 +158,7 @@ client.on("guildMemberAdd", (member) => {
                     console.log(3);
                     console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
     
-    channel.send(`**نورت سيرفر يـLǦ̩̥ = >** ${member}`)     
+    channel.send(`**نورت سيرفر يـKD = >** ${member}`)     
     channel.send(`**تم دعوته من قبل = >** ${Invite.inviter}`)     
              
  }
