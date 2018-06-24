@@ -120,7 +120,6 @@ client.on("guildMemberAdd", member => {
   return channel.send(`**WELCOM TO ⚔KD⚔Kingdom of  Death⚔**${member} `) 
 }).catch(console.error)
 })
-
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
@@ -136,6 +135,8 @@ client.on("ready", () => {
         })
     })
 })
+
+
 client.on("guildMemberAdd", (member) => {
     let channel = member.guild.channels.find('name', 'chat');
     if (!channel) {
@@ -156,14 +157,15 @@ client.on("guildMemberAdd", (member) => {
                 if (dat[Inv] < Invite.uses) {
                     console.log(3);
                     console.log(`${member} joined over ${Invite.inviter}'s invite ${Invite.code}`)
+    
     channel.send(`**نورت سيرفر يـLǦ̩̥ = >** ${member}`)     
-    channel.send(`**تم دعوته من قبل = >** ${Invite.inviter}`)           
+    channel.send(`**تم دعوته من قبل = >** ${Invite.inviter}`)     
+             
  }
             dat[Inv] = Invite.uses;
         })
     })
 });
-
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
