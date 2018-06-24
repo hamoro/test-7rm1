@@ -40,7 +40,7 @@ client.on("guildMemberAdd", member => {
       var Canvas = require('canvas')
       var jimp = require('jimp')
       
-      const mi = ['https://i.imgur.com/nnecMVj.png','https://i.imgur.com/nnecMVj.png']; //يمكن ضيف '/img/w3.png','/img/w4.png'...
+     const mi = ['./img/w1.png']; //يمكن ضيف '/img/w3.png','/img/w4.png'...
       
      
       
