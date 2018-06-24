@@ -128,7 +128,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "DzGaming Official Server")
+        guild = client.guilds.find("name", "⚔KD⚔Kingdom of  Death⚔")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -137,7 +137,7 @@ client.on("ready", () => {
     })
 })
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', 'join');
+    let channel = member.guild.channels.find('name', 'chat');
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -148,7 +148,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "DzGaming Official Server")
+        guild = client.guilds.find("name", "⚔KD⚔Kingdom of  Death⚔")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
