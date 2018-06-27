@@ -528,7 +528,7 @@ client.on('message', message => {
   if (message.content.startsWith( prefix + "KD")) {
   if (!message.channel.guild) return;
   let args = message.content.split(" ").slice(1).join(' ');
-  client.channels.get("460780673167392799").send(
+  client.channels.get("461503368863547392").send(
       "\n" + "**" + "● السيرفر :" + "**" +
       "\n" + "**" + "» " + message.guild.name + "**" +
       "\n" + "**" + " ● المرسل : " + "**" +
