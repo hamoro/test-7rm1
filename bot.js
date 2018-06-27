@@ -273,7 +273,7 @@ client.on('message', message => {
 
 
 
-const prefix = '#'; 
+const prefix = '!'; 
 
 client.on('ready', () => {console.log('ready')});
 client.on('message', message => {
