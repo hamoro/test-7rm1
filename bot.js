@@ -101,6 +101,75 @@ client.on("guildMemberAdd", member => {
       });
       });
       });
+client.on('message', message => {
+  if (message.content.startsWith("!avatar")) {
+
+      var mentionned = message.mentions.users.first();
+  var king66s;
+    if(mentionned){
+        var king66s = mentionned;
+    } else {
+        var king66s = message.author;
+        
+    }
+      const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+        .setAuthor(message.author.username, message.author.avatarURL)
+      .setImage(`${king66s.avatarURL}`)
+    message.channel.sendEmbed(embed);
+
+  }
+});	
+
+client.on('message', message => {
+
+    if (message.content.startsWith("رابط")) {        
+  message.channel.createInvite({
+        thing: true,
+        maxUses: 100,
+        maxAge: 86400
+    }).then(invite =>  
+      message.author.sendMessage(invite.url)
+    )
+    const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setDescription(" :white_check_mark: تم ارسال الرابط على الخاص ")
+      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
+              const Embed11 = new Discord.RichEmbed()
+        .setColor("RANDOM")
+                .setAuthor(message.guild.name, message.guild.iconURL)
+        .setDescription(`
+---------------------
+ :kissing_closed_eyes:  - هذا الرابط صالح ل 100 مستخدم فقط
+---------------------
+ :smiley: - هذا الرابط صالح لمده 24 ساعه فقط
+---------------------`)
+      message.author.sendEmbed(Embed11)
+    }
+ 
+});
+
+client.on('message', function(message) {
+    if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+            let command = message.content.split(" ")[0];
+        if(message.content.includes('discord.gg')){
+        message.reply (' ')
+           if(!message.channel.guild) return message.reply('** This command only for servers**');
+     message.member.addRole(message.guild.roles.find('name', 'Muted'));
+    const embed500 = new Discord.RichEmbed()
+      .setTitle(":x: | تمت معاقبتك")
+            .addField(`** لقد قمت بمخالفة قوانين السيرفر من خلال نشر سيرفرات اخرى  **` , `**ملاحظة  : إن كآن هذآ الميوت عن طريق الخطأ تكلم مع الادآرة**`)
+      .addField(`by`,`iMr.KBOOSH`)
+            .setColor("c91616")
+            .setThumbnail(`${message.author.avatarURL}`)
+            .setAuthor(message.author.username, message.author.avatarURL)
+        .setFooter(`${message.guild.name} Server`)
+     message.channel.send(embed500)
+   
+       
+    }
+    }
+})
 
 
 client.on('ready', () => {
@@ -110,7 +179,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`𝕂𝕀ℕ𝔾𝔻𝕆𝕄 𝕆𝔽 𝔻𝔼𝔸𝕋ℍ ℂ𝕃𝔸ℕ`,"http://twitch.tv/S-F")
+client.user.setGame(`𝕂𝔻 ℂ𝕃𝔸ℕ`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
