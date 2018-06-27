@@ -13,7 +13,7 @@ client.on('message', message => {
 
 const moment = require('moment');
 client.on("guildMemberAdd", member => {
-let welcomer = member.guild.channels.find("name","chat-minecraft");
+let welcomer = member.guild.channels.find("name","chat");
       if(!welcomer) return;
       if(welcomer) {
          moment.locale('ar-ly');
@@ -35,12 +35,12 @@ let welcomer = member.guild.channels.find("name","chat-minecraft");
 const fs = require('fs');
 client.on("guildMemberAdd", member => {
       
-      const welcomer = member.guild.channels.find("name","chat-minecraft"); //اسم روم
+      const welcomer = member.guild.channels.find("name","chat"); //اسم روم
                 
       var Canvas = require('canvas')
       var jimp = require('jimp')
       
-     const mi = ['./img/w1.png','./img/w2.png','./img/w3.png']; //يمكن ضيف '/img/w3.png','/img/w4.png'...
+     const mi = ['./img/w1.png','./img/w2.png','./img/w3.png','./img/w4.png']; //يمكن ضيف '/img/w3.png','/img/w4.png'...
       
      
       
@@ -92,7 +92,7 @@ client.on("guildMemberAdd", member => {
                               ctx.fontSize = '28px';
                               ctx.fillStyle = "#FFFFFF";
                               ctx.textAlign = "center";
-   ctx.fillText(` WELCOM TO KINGDOM OF DEATH SERVER${member.guild.name} ` , 200, 190);
+   ctx.fillText(` WELCOM TO KINGDOM OF DEATH CLAN${member.guild.name} ` , 200, 190);
    
    
 
@@ -101,6 +101,18 @@ client.on("guildMemberAdd", member => {
       });
       });
       });
+
+
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Desert Bot- Script By : i1Suhaib`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(`𝕂𝕀ℕ𝔾𝔻𝕆𝕄 𝕆𝔽 𝔻𝔼𝔸𝕋ℍ ℂ𝕃𝔸ℕ`,"http://twitch.tv/S-F")
+client.user.setStatus("dnd")
+});
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
