@@ -144,15 +144,14 @@ client.on('message', function(message) {
     }
     }
 })
-
 client.on('message', message => {
-    if(message.content == ('!profile')) {    
+    if(message.content == ('!id')) {    
  
              if (message.channel.type === 'dm') return message.reply('This Command Is Not Avaible In Dm\'s :x:');   
             var Canvas = module.require('canvas');
             var jimp = module.require('jimp');
     
-     const w = ['./img/ID1.png','./img/ID2.png','./img/ID3.png','./img/ID4.png','./img/ID5.png'];
+     const w = ['./img/ID1.png','./Dreams/img/ID2.png','./img/ID3.png','./img/ID4.png','./img/ID5.png'];
     
              let Image = Canvas.Image,
                  canvas = new Canvas(802, 404),
@@ -199,18 +198,20 @@ client.on('message', message => {
                                                  ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
                                                      if (err) return console.log(err);
                             
+                                                                                           //Avatar
                                                              let Avatar = Canvas.Image;
                                                              let ava = new Avatar;
                                                              ava.src = buf;
                                                              ctx.beginPath();
                                                            ctx.drawImage(ava, 335, 3, 160, 169);
+                                                                            //wl
                                                      ctx.font = '35px Arial Bold';
                                                      ctx.fontSize = '40px';
                                                      ctx.fillStyle = "#dadada";
                                                      ctx.textAlign = "center";
                                                     
                             
-                                                     ctx.font = '30px Arial Bold';
+                                                     ctx.font = '30px Arial Bold';//Name ,_,
                                                      ctx.fontSize = '30px';
                                                      ctx.fillStyle = "#ffffff";
                                                                              ctx.fillText(`${getvalueof.username}`,655, 170);
