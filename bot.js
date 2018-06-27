@@ -522,22 +522,7 @@ client.on('message', message => {
 
 
 
-var prefix = "!"
-client.on('message', message => {
 
-  if (message.content.startsWith( prefix + "KD")) {
-  if (!message.channel.guild) return;
-  let args = message.content.split(" ").slice(1).join(' ');
-  client.channels.get("461503368863547392").send(
-      "\n" + "**" + "● السيرفر :" + "**" +
-      "\n" + "**" + "» " + message.guild.name + "**" +
-      "\n" + "**" + " ● المرسل : " + "**" +
-      "\n" + "**" + "» " + message.author.tag + "**" +
-      "\n" + "**" + " ● اقتراحي : " + "**" +
-      "\n" + "**" + args + "**")
-	  
-  }
-  });
 
 
 client.on('ready', () => {
