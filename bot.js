@@ -188,11 +188,7 @@ message.channel.send({embed});
 
 });
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`「.🔱 Welcome TO KD 🔱.」${member} `) 
-}).catch(console.error)
-})
+
 
 client.on('message', function(msg) {
          var prefix = "!"
